@@ -9,6 +9,8 @@ Matéria de Orientação à Objetos da Universidade de Brasília em 1/2021.
 
 170038971	Leonardo Sampaio Barros
 
+170108996	Lucas Pereira Pires
+
 190118059	Vinicius Angelo de Brito Vieira
 
 202045802	João Victor Soares de Moura Costa
