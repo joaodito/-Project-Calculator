@@ -45,8 +45,8 @@ public class App {
         Alunos alunos = new alunos();
         alunos.setEmailAluno();
         alunos.setNomeAluno();
-        alunos.setQuantidadeDePessoas(quantidadeDePessoas)
-        alunos.setTotalDeRendimentoAluno(totalDeRendimentoAluno)
+        alunos.setQuantidadeDePessoas(quantidadeDePessoas);
+        alunos.setTotalDeRendimentoAluno(totalDeRendimentoAluno);
 
     }
 
