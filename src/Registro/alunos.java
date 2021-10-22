@@ -4,27 +4,18 @@ import javax.swing.JOptionPane;
 
 public class Aluno {
 
-public class alunos {
 		private String nomeAluno;
 		private String emailAluno;
-		private String totalDeRendimentoAluno;
 		private float totalDeRendimento;
 		private int numeroDeAlunos;
 		private float rendimentoDoAluno;
 
 
-		public alunos(String nome, String email, String rendimentos) {
-			this.nomeAluno = nome;
-			this.emailAluno = email;
-			this.totalDeRendimentoAluno = rendimentos;		
 		public Aluno(String nomeAluno, String emailAluno, float totalDeRendimentos) {
 			this.nomeAluno = nomeAluno;
 			this.emailAluno = emailAluno;
 			this.totalDeRendimento = totalDeRendimentos;		
 			}
-
-		public String getRendimentos() {
-			return totalDeRendimentoAluno;
 
 		public String getNomeAluno() {
 			return nomeAluno;
@@ -37,13 +28,6 @@ public class alunos {
 		public float getTotalDeRendimentoAluno() {
 			return getTotalDeRendimentoAluno();
 		}
-		public String mostrar() {
-			String resposta = "Aluno:\n"
-							+ "------\n"
-							+ "Nome: " + nomeAluno + "\n"
-							+ "Email: " + emailAluno + "\n"
-							+ "Rendimentos mensais: " + totalDeRendimentoAluno + "\n";
-			return resposta;
 
 		public int getNumeroDeAlunos() {
 			return numeroDeAlunos;
@@ -65,4 +49,7 @@ public class alunos {
 
 			tempP[alunos.length] = a;
 
-			alunos = tempP
+			alunos = tempP;
+
+		}
+}
