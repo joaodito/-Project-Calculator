@@ -2,7 +2,7 @@ package Registro;
 
 import javax.swing.JOptionPane;
 
-public class Aluno {
+public class aluno {
 
 		private String nomeAluno;
 		private String emailAluno;
@@ -11,7 +11,7 @@ public class Aluno {
 		private float rendimentoDoAluno;
 
 
-		public Aluno(String nomeAluno, String emailAluno, float totalDeRendimentos) {
+		public aluno (String nomeAluno, String emailAluno, float totalDeRendimentos) {
 			this.nomeAluno = nomeAluno;
 			this.emailAluno = emailAluno;
 			this.totalDeRendimento = totalDeRendimentos;		
@@ -53,3 +53,4 @@ public class Aluno {
 
 		}
 }
+
