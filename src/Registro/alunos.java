@@ -1,12 +1,11 @@
 package Registro;
-
-public class aluno {
+public class alunos {
 		private String nomeAluno;
 		private String emailAluno;
 		private String totalDeRendimentoAluno;
-
-
-		public aluno(String nome, String email, String rendimentos) {
+		
+			
+		public alunos(String nome, String email, String rendimentos) {
 			this.nomeAluno = nome;
 			this.emailAluno = email;
 			this.totalDeRendimentoAluno = rendimentos;		
@@ -17,10 +16,10 @@ public class aluno {
 		}
 		public String mostrar() {
 			String resposta = "Aluno:\n"
-	@@ -21,5 +44,25 @@ public String mostrar() {
+							+ "------\n"
+							+ "Nome: " + nomeAluno + "\n"
 							+ "Email: " + emailAluno + "\n"
 							+ "Rendimentos mensais: " + totalDeRendimentoAluno + "\n";
 			return resposta;
 		}
 }
-
