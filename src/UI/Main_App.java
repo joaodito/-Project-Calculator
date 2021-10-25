@@ -35,7 +35,8 @@ public class Main_App{
 			break;
 
 		case 2:
-			republica.cadastrarDespesa();
+			despesa.cadastrarDespesa();
+			despesa.gravarDespesas();
 			break;
 		
 		case 3:

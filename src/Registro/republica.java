@@ -14,13 +14,6 @@ public class republica {
 	}
 	
 	
-	public void cadastrarDespesa() {
-		String nome = JOptionPane.showInputDialog("Informe o nome da despesa");
-		String categoria = JOptionPane.showInputDialog("Informe a categoria");
-		String totalDeDespesa = JOptionPane.showInputDialog("Informe o total da despesa");
-		
-		Despesas b = new Despesas(nome, categoria, totalDeDespesa);
-		despesas.add(b);
-	}
+
 	}
 

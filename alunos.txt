@@ -1,1 +1,2 @@
-vinicius,vinio@gmail.com,1221212
+vinic,v@gmail.com,122121
+pedro,p@gmail.com,4000
