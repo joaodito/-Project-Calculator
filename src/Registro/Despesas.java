@@ -12,7 +12,11 @@ public class Despesas {
 	}
 
 
-	public String getNome() {
+	public Despesas() {
+    }
+
+
+    public String getNome() {
 		return nome;
 	}
 
