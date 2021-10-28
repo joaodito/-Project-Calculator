@@ -1,2 +1,1 @@
-ceb,luz,3000
-comida,residencial,5000
+lavar,cachorro,100
