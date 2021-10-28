@@ -1,0 +1,2 @@
+ceb,luz,3000
+comida,residencial,5000
