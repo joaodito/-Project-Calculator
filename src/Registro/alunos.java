@@ -12,15 +12,18 @@ public class alunos {
 
 	private String nomeAluno;
 	private String emailAluno;
-	private String totalDeRendimento;
-	private int numeroDeAlunos;
-	private float rendimentoDoAluno;
+	public String totalDeRendimento;
+	public float totalR;
+	public float numeroDeAlunos;
+	public float rendimentoDoAluno;
+
 	List<alunos> aluno;
 
 	public alunos(String nomeAluno, String emailAluno, String totalDeRendimentos) {
 		this.nomeAluno = nomeAluno;
 		this.emailAluno = emailAluno;
 		this.totalDeRendimento = totalDeRendimentos;
+		this.numeroDeAlunos = 0;
 	}
 
 	public alunos() {
@@ -47,34 +50,30 @@ public class alunos {
 		return totalDeRendimento;
 	}
 
-	public void setTotalDeRendimento(String totalDeRendimento) {
-		this.totalDeRendimento = totalDeRendimento;
-	}
-
-	public int getNumeroDeAlunos() {
+	public float getNumeroDeAlunos() {
 		return numeroDeAlunos;
-	}
-
-	public void setNumeroDeAlunos(int numeroDeAlunos) {
-		this.numeroDeAlunos = numeroDeAlunos;
 	}
 
 	public float getRendimentoDoAluno() {
 		return rendimentoDoAluno;
 	}
-
-	public void setRendimentoDoAluno(float rendimentoDoAluno) {
-		this.rendimentoDoAluno = rendimentoDoAluno;
+	public float gettoralR() {
+		return totalR;
 	}
 
 	public void cadastrarAluno() {
 		nomeAluno = JOptionPane.showInputDialog("Informe o nome do aluno");
 		emailAluno = JOptionPane.showInputDialog("Informe o email do aluno");
-		totalDeRendimento = JOptionPane.showInputDialog("Informe o total de rendimento do aluno");
-
+		String totalDeRendimento = JOptionPane.showInputDialog("Informe o total de rendimento do aluno");
+		float rendimentoDoAluno = Float.parseFloat(totalDeRendimento);
+		totalR= rendimentoDoAluno + totalR;
+		numeroDeAlunos = numeroDeAlunos + 1;
+		
 		alunos a = new alunos(nomeAluno, emailAluno, totalDeRendimento);
 
 		aluno.add(a);
+		System.out.println(numeroDeAlunos);
+		System.out.println(totalR);
 
 	}
 

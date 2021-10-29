@@ -8,10 +8,12 @@ import java.util.LinkedList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-public class Despesas {
+public class Despesas extends Categoria{
 	private String descricao;
 	private String categoria;
 	private String totalDeDespesa;
+	private float despesaF;
+	public float despesafinal;
 	int ano;
 	String mes;
 	String nomeArquivo = "despesas" + "_" + mes + "_" + ano + ".txt";
@@ -27,7 +29,9 @@ public class Despesas {
 	public Despesas() {
 		despesas = new LinkedList<Despesas>();
 	}
-
+	public float getDespesafinal() {
+		return despesafinal;
+	}
 	public String getDescricao() {
 		return descricao;
 	}
@@ -73,13 +77,16 @@ public class Despesas {
 		String descricao = JOptionPane.showInputDialog("Informe a descrição da despesa");
 		String categoria = JOptionPane.showInputDialog("Informe a categoria");
 		String totalDeDespesa = JOptionPane.showInputDialog("Informe o total da despesa");
-
+		float despesaF = Float.parseFloat(totalDeDespesa);
+		despesafinal = despesafinal + despesaF;
 		Despesas b = new Despesas(descricao, categoria, totalDeDespesa);
+		System.out.println(despesafinal);
 		despesas.add(b);
 	}
 
 	public String toString() {
 		return descricao + "," + categoria + "," + totalDeDespesa;
+
 	}
 
 	public void gravarDespesas() {

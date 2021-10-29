@@ -1,1 +1,2 @@
-lavar,cachorro,100
+ceb,luz,500
+vc,dfd,345

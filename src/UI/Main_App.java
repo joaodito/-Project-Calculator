@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import Registro.republica;
 import Registro.alunos;
+import Registro.CalculoIgualitario;
 import Registro.Categoria;
 import Registro.Despesas;
 
@@ -37,12 +38,12 @@ public class Main_App {
 
 			case 3:
 				categoria.cadastrarCategoria();
-				categoria.gravarCategoria();
 				break;
 
 			case 4:
-
-				break;
+			CalculoIgualitario CalculoIgualitario = new CalculoIgualitario(alunos.getNumeroDeAlunos(),despesa.getDespesafinal());
+			JOptionPane.showMessageDialog(null,"O Valor a ser pago de cada aluno é: " + CalculoIgualitario.CalculoIgualitarioFinal());
+			break;
 
 			case 5:
 
@@ -54,7 +55,7 @@ public class Main_App {
 
 			default:
 
-				JOptionPane.showMessageDialog(null, "Opc�o Inv�lida!");
+				JOptionPane.showMessageDialog(null, "Opcao Invalida!");
 				break;
 			}
 		} while (opcao != 0);
