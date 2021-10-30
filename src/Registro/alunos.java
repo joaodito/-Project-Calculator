@@ -1,23 +1,30 @@
 package Registro;
 
 import javax.swing.JOptionPane;
+
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 public class alunos {
-
+	public String nomeinfo;
+	public String rendainfo;
 	private String nomeAluno;
 	private String emailAluno;
 	public String totalDeRendimento;
 	public float totalR;
 	public float numeroDeAlunos;
 	public float rendimentoDoAluno;
+	public static String[] AlunoInfo;
 
-	List<alunos> aluno;
+	static List<alunos> aluno;
 
 	public alunos(String nomeAluno, String emailAluno, String totalDeRendimentos) {
 		this.nomeAluno = nomeAluno;
@@ -30,9 +37,7 @@ public class alunos {
 		aluno = new LinkedList<alunos>();
 	}
 
-	public String getNomeAluno() {
-		return nomeAluno;
-	}
+	
 
 	public void setNomeAluno(String nomeAluno) {
 		this.nomeAluno = nomeAluno;
@@ -42,21 +47,13 @@ public class alunos {
 		return emailAluno;
 	}
 
-	public void setEmailAluno(String emailAluno) {
-		this.emailAluno = emailAluno;
-	}
 
-	public String getTotalDeRendimento() {
-		return totalDeRendimento;
-	}
 
 	public float getNumeroDeAlunos() {
 		return numeroDeAlunos;
 	}
 
-	public float getRendimentoDoAluno() {
-		return rendimentoDoAluno;
-	}
+	
 	public float gettoralR() {
 		return totalR;
 	}
@@ -72,31 +69,43 @@ public class alunos {
 		alunos a = new alunos(nomeAluno, emailAluno, totalDeRendimento);
 
 		aluno.add(a);
+
 		System.out.println(numeroDeAlunos);
 		System.out.println(totalR);
+		
 
 	}
 
 	public String toString() {
-		return "" + nomeAluno + "," + emailAluno + "," + totalDeRendimento;
+		return "" + nomeAluno + "," + emailAluno + "," + totalDeRendimento +",";
 	}
 
 	public void salvarAlunos() {
-		BufferedWriter buffer = null;
-		FileWriter out = null;
+		BufferedWriter BW = null;
+		FileWriter FW = null;
 
 		try {
-			out = new FileWriter("alunos.txt");
-			buffer = new BufferedWriter(out);
+			FW = new FileWriter("alunos.txt");
+			BW = new BufferedWriter(FW);
 
 			for (alunos a : aluno) {
-				buffer.write(a.toString());
-				buffer.write('\n');
+				BW.write(a.toString());
+				BW.write('\n');
 			}
-			buffer.close();
+			BW.close();
 		} catch (IOException e) {
 
 		}
 	}
+	
+		public String getNomeAluno() {
+			return AlunoInfo[0];
+		}
+		public String getRendaAluno() {
+			return AlunoInfo[2];
+		}
+		
+	}
 
-}
+	
+	
