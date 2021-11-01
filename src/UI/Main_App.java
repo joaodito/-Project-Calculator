@@ -1,10 +1,8 @@
 package UI;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import javax.naming.spi.DirStateFactory.Result;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 import Registro.republica;
 import Registro.alunos;
@@ -14,20 +12,23 @@ import Registro.Categoria;
 import Registro.Despesas;
 
 public class Main_App {
-
+	public UIManager ui ;
 	static republica republica = new republica();
 	static Despesas despesa = new Despesas();
 	static Categoria categoria = new Categoria();
 	static alunos alunos = new alunos();
-	public static float jaRodou = 0 ;
 
 	public static void main(String[] args) throws IOException {
-		int opcao;
 		
+		
+		int opcao;
+		JOptionPane.showMessageDialog(null,"BEM VINDO!! AO ADMINISTRADOR DE GASTOS\n"
+		+"Como Utilizar:\n1-Cadastre os Alunos\n"
+		+"2-Cadastre a Categoria ou Subcategoria \n3-Cadastre As Despesas\n4-Escolha o Metodo a ser Ultilizado para a Divisão de Gastos");
 		do {
 			
-			String menu = "Informe a op��o desejada: \n" + "1 - Cadastrar aluno \n" + "2 - Cadastrar despesa \n"
-					+ "3 - Cadastrar categoria \n" + "4 - C�lculo proporcional \n" + "5 - C�lculo igualit�rio \n"
+			String menu = "Informe a opcao desejada: \n" + "1 - Cadastrar aluno \n" + "2 - Cadastrar despesa \n"
+					+ "3 - Cadastrar categoria \n" + "4 - Calculo proporcional \n" + "5 - Calculo igualitario \n"
 
 					+ "0 - Sair do programa \n";
 			String strOpcao = JOptionPane.showInputDialog(menu);
@@ -38,7 +39,6 @@ public class Main_App {
 			case 1:
 				alunos.cadastrarAluno();
 				alunos.salvarAlunos();
-				//CalculoProporcional.buscarAlunos();
 				break;
 
 			case 2:
@@ -47,7 +47,7 @@ public class Main_App {
 				break;
 
 			case 3:
-				categoria.cadastrarCategoria();
+				Categoria.cadastrarCategoria();
 				break;
 
 			case 4:

@@ -1,4 +1,2 @@
-Vinicius,@,1234,
-pedro,1560,1560,
-bruno,fef,1902,
-luiz,ded,1432,
+VInicius,@,1234,
+Pedro,@,2134,

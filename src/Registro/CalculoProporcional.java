@@ -1,17 +1,12 @@
 package Registro;
 
 import java.io.FileReader;
-import java.io.IOException;
-import java.lang.ProcessHandle.Info;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import javax.swing.JOptionPane;
 
 public class CalculoProporcional extends alunos {
     public static Object buscarAlunos;
-    private String nomealuno;
-    private String rendaAluno;
     public static float rendaTotal;
     public static float DespesaTotal;
     public static float Calculofinal;
@@ -63,7 +58,7 @@ public class CalculoProporcional extends alunos {
         for(int i=0;i<Infonome.size();i++){
         percent.add(Infconta.get(i)/rendaTotal*100);
         Calculofinal= (percent.get(i)/100)*DespesaTotal;
-        JOptionPane.showMessageDialog(null, DespesaTotal+"\nNome: "+Infonome.get(i)+"\nRenda:R$"+ Inforenda.get(i)+"\nPorcentagem: "+percent.get(i)+"%\nTotal a Pagar:"+ Calculofinal);
+        JOptionPane.showMessageDialog(null,"DESPESA:R$ "+ DespesaTotal+"\nNome: "+Infonome.get(i)+"\nRenda:R$ "+ Inforenda.get(i)+"\nPorcentagem: "+percent.get(i)+"%\nTotal a Pagar:R$ "+ Calculofinal);
         }
         
         return;
