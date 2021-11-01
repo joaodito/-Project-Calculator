@@ -1,21 +1,20 @@
 package Registro;
 
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.YearMonth;
 import java.util.LinkedList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
 public class Despesas extends Categoria{
+	int ano = YearMonth.now().getYear();
+	int mes = YearMonth.now().getMonthValue();
 	private String descricao;
 	private String categoria;
 	private String totalDeDespesa;
-	private float despesaF;
 	public float despesafinal;
-	int ano;
-	String mes;
 	String nomeArquivo = "despesas" + "_" + mes + "_" + ano + ".txt";
 	List<Despesas> despesas;
 
@@ -40,23 +39,6 @@ public class Despesas extends Categoria{
 		this.descricao = descricao;
 	}
 
-	public int getAno() {
-		return ano;
-
-	}
-
-	public void setAno(int ano) {
-		this.ano = ano;
-	}
-
-	public String getMes() {
-		return mes;
-	}
-
-	public void setMes(String mes) {
-		this.mes = mes;
-	}
-
 	public String getCategoria() {
 		return categoria;
 	}
@@ -74,13 +56,13 @@ public class Despesas extends Categoria{
 	}
 
 	public void cadastrarDespesa() {
+
 		String descricao = JOptionPane.showInputDialog("Informe a descrição da despesa");
-		String categoria = JOptionPane.showInputDialog("Informe a categoria");
+		String categoria = JOptionPane.showInputDialog("Informe uma categoria"+"\n"+"CATEGORIAS: "+ListaCategoria+"\n"+"SUBCATEGORIAS: "+ListaSubCategoria);
 		String totalDeDespesa = JOptionPane.showInputDialog("Informe o total da despesa");
 		float despesaF = Float.parseFloat(totalDeDespesa);
 		despesafinal = despesafinal + despesaF;
 		Despesas b = new Despesas(descricao, categoria, totalDeDespesa);
-		System.out.println(despesafinal);
 		despesas.add(b);
 	}
 

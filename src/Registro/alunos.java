@@ -3,15 +3,10 @@ package Registro;
 import javax.swing.JOptionPane;
 
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public class alunos {
 	public String nomeinfo;
@@ -37,23 +32,14 @@ public class alunos {
 		aluno = new LinkedList<alunos>();
 	}
 
-	
-
 	public void setNomeAluno(String nomeAluno) {
 		this.nomeAluno = nomeAluno;
 	}
-
-	public String getEmailAluno() {
-		return emailAluno;
-	}
-
-
 
 	public float getNumeroDeAlunos() {
 		return numeroDeAlunos;
 	}
 
-	
 	public float gettoralR() {
 		return totalR;
 	}
@@ -69,11 +55,6 @@ public class alunos {
 		alunos a = new alunos(nomeAluno, emailAluno, totalDeRendimento);
 
 		aluno.add(a);
-
-		System.out.println(numeroDeAlunos);
-		System.out.println(totalR);
-		
-
 	}
 
 	public String toString() {
