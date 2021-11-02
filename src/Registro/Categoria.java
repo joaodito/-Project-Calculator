@@ -17,14 +17,14 @@ public Categoria(String categorias){
 }
 	public static void cadastrarCategoria(){
 		int confirm;
-		String teste = JOptionPane.showInputDialog("Cadastro: \n1 para categoria ou 2 para subcategoria");
+		String teste = JOptionPane.showInputDialog("Cadastro: \n 1 para categoria ou 2 para subcategoria");
 		confirm= Integer.parseInt(teste);
 		if(confirm == 1){
-		String categorias = JOptionPane.showInputDialog("Informe a categoria");
+		String categorias = JOptionPane.showInputDialog("\n Informe a categoria");
 		ListaCategoria.add(categorias);
 		}
 		else {
-		String subcategorias = JOptionPane.showInputDialog("Informe a subcategoria");
+		String subcategorias = JOptionPane.showInputDialog("\n Informe a subcategoria");
 		ListaSubCategoria.add(subcategorias);
 		}
 	}
